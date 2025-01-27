@@ -36,7 +36,7 @@
     # Update the DNS record and send a notification
 
     # Construct the Cloudflare API URL
-    :local url "https://api.cloudflare.com/client/v4/zones/$ZONEIDv6/dns_records/$RECORDIDv6/" #check CF API
+    :local url "https://api.cloudflare.com/client/v4/zones/$ZONEIDv6/dns_records/$RECORDIDv6/"; #check CF API
     
     # Call the Cloudflare API to update the DNS record
     :local cfapi [/tool fetch http-method=put mode=https url=$url check-certificate=no output=user as-value \
